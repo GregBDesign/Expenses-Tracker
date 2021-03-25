@@ -12,17 +12,24 @@
                 <label for="Amount">Expenses Cost:</label>
                     <input type="number" name="Amount" placeholder="Amount">
                 <input type="date">
+                <button type="submit">Submit</button>
             </form>
         </section>
         <section>
-            <table>
+            <table id="expensesList">
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Date</th>
                         <th>Amount</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
+                <tfoot>
+                    <tr>
+                        <th>Total:</th>
+                        <td id="runVal">$0</td>
+                    </tr>
+                </tfoot>
             </table>
         </section>
         <script src="app.js"></script>
