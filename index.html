@@ -2,36 +2,34 @@
 <html>
     <head>
         <title>Expenses Tracker</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <section>
-            <h1>Expenses Tracker</h1>
-            <form>
-                <label for="Name">Expenses Item:</label>
-                    <input type="text" name="Name" placeholder="Name">
-                <label for="Amount">Expenses Cost:</label>
-                    <input type="number" name="Amount" placeholder="Amount">
-                <input type="date">
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <section>
-            <table id="expensesList">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Total:</th>
-                        <td id="runVal">$0</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
+        <div class="container">
+            <section class="box">
+                <h1 class="title">Expenses Tracker</h1>
+                <form>
+                    <label for="Name">Expenses Item:</label>
+                        <input type="text" name="Name" placeholder="Name" required>
+                    <label for="Amount">Expenses Cost:</label>
+                        <input type="number" name="Amount" placeholder="Amount" required>
+                    <input type="date" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <section>
+                <table id="expensesList" class="table container">
+                    <thead class="top">
+                        <tr>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+        </div>
         <script src="app.js"></script>
     </body>
 </html>
